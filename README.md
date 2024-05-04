@@ -1,2 +1,3 @@
 # whisper-voice-assistant
-A voice assistant leveraging OpenAI Whisper for Speech-to-Text (STT) and Text-to-Speech (TTS) capabilities.
+
+A voice assistant that leverages the power of the Speech-to-Text (STT) and Text-to-Speech (TTS) functionalities of the OpenAI Whisper technology.
