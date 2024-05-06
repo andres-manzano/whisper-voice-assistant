@@ -26,7 +26,7 @@ class VoiceAssistant():
                     return text
                 
             except sr.RequestError as e:
-                print(f"Could not request results from Whisper API; {e}")
+                print(f"Could not request results from Whisper API: {e}")
                 
             except sr.UnknownValueError:
                 print("Unknown error occurred")
@@ -68,7 +68,7 @@ try:
     while True:
         is_speaking = v_assist.detect_speech()
         if is_speaking == "Stop." or "stop":
-            break  # Exit the loop if no speech is detected within the timeout
+            break  # Exit the loop if the speaker says "stop"
 
         # Continue processing if speech is detected
         print("Processing speech...")
@@ -77,5 +77,6 @@ try:
         response = v_assist.get_completion(messages, temperature = 0.5)
         v_assist.speak(response)
         print(response)
+        
 finally:
     print("Assistant stopped.")
