@@ -58,7 +58,7 @@ class VoiceAssistant():
                 
                 return False
     
-    def get_completion(self, messages, model = "gpt-4-turbo-2024-04-09", temperature=0):
+    def get_completion(self, messages, model = "gpt-4o", temperature=0):
         """
         Generates a response from the provided messages using OpenAI's GPT model.
         
